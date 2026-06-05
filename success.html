@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>ANYU — Thank You</title>
+  <meta
+    name="description"
+    content="Thank you for helping shape ANYU before launch."
+  />
+
+  <link rel="icon" href="assets/favicon.png" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body class="legal-page">
+  <section class="legal-hero">
+    <div class="legal-hero__inner">
+      <img src="assets/anyu-logo.png" alt="ANYU">
+
+      <h1 id="title">Thank you for helping shape ANYU.</h1>
+
+      <p id="message">
+        Your feedback has been received. We are using your answers to build safer rides,
+        very fair prices, and a better mobility experience before launch.
+      </p>
+
+      <div class="contact-actions" style="margin-top: 28px;">
+        <a class="btn btn--gold" href="/" id="homeBtn">Back to Home</a>
+
+        <a
+          class="btn btn--whatsapp"
+          id="whatsappBtn"
+          href="https://wa.me/237652317825?text=Hi%20ANYU%2C%20I%20just%20shared%20my%20feedback."
+          target="_blank"
+          rel="noopener"
+        >
+          WhatsApp ANYU
+        </a>
+      </div>
+
+      <p style="color: #91a6b7; margin-top: 24px; max-width: 620px;" id="smallText">
+        We may contact you with early access updates if you allowed WhatsApp updates.
+      </p>
+    </div>
+  </section>
+
+  <script>
+    const lang = (navigator.language || navigator.userLanguage || "en").toLowerCase();
+
+    if (lang.startsWith("fr")) {
+      document.documentElement.lang = "fr";
+
+      document.getElementById("title").textContent =
+        "Merci d’aider à construire ANYU.";
+
+      document.getElementById("message").textContent =
+        "Votre avis a été reçu. Nous utilisons vos réponses pour construire des trajets plus sûrs, des prix très justes et une meilleure expérience de mobilité avant le lancement.";
+
+      document.getElementById("homeBtn").textContent =
+        "Retour à l’accueil";
+
+      document.getElementById("whatsappBtn").textContent =
+        "Contacter ANYU";
+
+      document.getElementById("smallText").textContent =
+        "Nous pourrons vous contacter avec les mises à jour d’accès anticipé si vous avez accepté les messages WhatsApp.";
+    }
+  </script>
+</body>
+</html>

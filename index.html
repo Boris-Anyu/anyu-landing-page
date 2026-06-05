@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>ANYU — Safe Rides. Very Fair Prices.</title>
+  <meta
+    name="description"
+    content="ANYU is a modern mobility platform focused on safer rides, verified drivers, very fair pricing, flexible payments, and trusted everyday movement."
+  />
+
+  <link rel="icon" href="assets/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600;700;800;900&family=DM+Serif+Display:ital@0;1&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+<header class="nav" id="nav">
+  <a class="nav__brand" href="#home" aria-label="ANYU home">
+    <img src="assets/anyu-logo.png" alt="ANYU" class="nav__logo-img">
+  </a>
+
+  <nav class="nav__links">
+    <a href="#safety" data-i18n="nav_safety">Safety</a>
+    <a href="#pricing" data-i18n="nav_pricing">Low Pricing</a>
+    <a href="#how" data-i18n="nav_how">How It Works</a>
+    <a href="#drivers" data-i18n="nav_drivers">Drivers</a>
+    <a href="#faq" data-i18n="nav_faq">FAQs</a>
+  </nav>
+
+  <div class="nav__right">
+    <div class="lang-switcher" id="langSwitcher">
+      <button class="lang-btn" id="langBtn" type="button" aria-label="Change language">
+        <span>🌐</span>
+        <span id="langLabel">EN</span>
+        <span class="lang-caret">▾</span>
+      </button>
+
+      <div class="lang-dropdown" id="langDropdown">
+        <button type="button" data-lang="en">English</button>
+        <button type="button" data-lang="fr">Français</button>
+      </div>
+    </div>
+
+    <a class="nav__cta" href="#waitlist" data-i18n="nav_cta">Join Early Access</a>
+  </div>
+
+  <button class="nav__burger" id="burger" aria-label="Open menu" type="button">
+    <span></span>
+    <span></span>
+  </button>
+</header>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#waitlist" class="mm__cta" data-i18n="nav_cta">Join Early Access</a>
+  <a href="#safety" class="mm__link" data-i18n="nav_safety">Safety</a>
+  <a href="#pricing" class="mm__link" data-i18n="nav_pricing">Low Pricing</a>
+  <a href="#how" class="mm__link" data-i18n="nav_how">How It Works</a>
+  <a href="#drivers" class="mm__link" data-i18n="nav_drivers">Drivers</a>
+  <a href="#faq" class="mm__link" data-i18n="nav_faq">FAQs</a>
+
+  <div class="mm__lang-row">
+    <button type="button" data-lang="en" class="mm__lang-opt">EN</button>
+    <button type="button" data-lang="fr" class="mm__lang-opt">FR</button>
+  </div>
+</div>
+
+<main>
+
+<section class="hero" id="home">
+  <div class="hero__bg">
+    <div class="hero__orb hero__orb--1"></div>
+    <div class="hero__orb hero__orb--2"></div>
+    <div class="hero__grid"></div>
+  </div>
+
+  <div class="hero__inner">
+    <div class="hero__left">
+      <div class="hero__pill">
+        <span class="pill__dot"></span>
+        <span data-i18n="hero_pill">Pre-launch access is opening soon</span>
+      </div>
+
+      <h1 class="hero__h1">
+        <span data-i18n="hero_h1_1">Safe Rides.</span><br>
+        <span data-i18n="hero_h1_2">Very Fair Prices.</span><br>
+        <em data-i18n="hero_h1_3">ANYU is coming.</em>
+      </h1>
+
+      <p class="hero__sub" data-i18n="hero_sub">
+        ANYU is a modern mobility platform built around verified drivers, emergency safety tools, transparent low pricing, and trusted everyday movement.
+      </p>
+
+      <div class="hero__actions">
+        <a href="#waitlist" class="btn btn--gold" data-i18n="hero_cta1">Join Early Access</a>
+        <a href="#drivers" class="btn btn--ghost" data-i18n="hero_cta2">Become a Driver</a>
+        <a
+          href="https://wa.me/237652317825?text=Hi%20ANYU%2C%20I%20want%20to%20learn%20more."
+          target="_blank"
+          rel="noopener"
+          class="btn btn--whatsapp"
+          data-i18n="hero_cta3"
+        >
+          WhatsApp Us
+        </a>
+      </div>
+
+      <div class="hero__trust">
+        <div class="trust-item">
+          <strong data-i18n="trust1_h">Verified Drivers</strong>
+          <span data-i18n="trust1_p">Know who is picking you up</span>
+        </div>
+
+        <div class="trust-item">
+          <strong data-i18n="trust2_h">Very Fair Prices</strong>
+          <span data-i18n="trust2_p">Clear fares before you ride</span>
+        </div>
+
+        <div class="trust-item">
+          <strong data-i18n="trust3_h">Safety Tools</strong>
+          <span data-i18n="trust3_p">SOS, trip sharing, ride PIN</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero__right">
+      <div class="hero__visual-card">
+        <div class="phone-mock">
+          <div class="phone-top"></div>
+
+          <div class="phone-map">
+            <div class="map-line"></div>
+            <span class="car-dot car-dot--1">🚗</span>
+            <span class="car-dot car-dot--2">🚗</span>
+            <span class="car-dot car-dot--3">🚗</span>
+          </div>
+
+          <div class="phone-panel">
+            <p data-i18n="mock_title">Driver nearby</p>
+            <h3 data-i18n="mock_eta">Arriving in 3 mins</h3>
+
+            <div class="mock-row">
+              <span>🛡️</span>
+              <span data-i18n="mock_safe">Verified driver • Trip sharing ready</span>
+            </div>
+
+            <div class="mock-row mock-row--price">
+              <span>💰</span>
+              <span data-i18n="mock_price">Estimated fare shown before booking</span>
+            </div>
+
+            <button data-i18n="mock_btn">Share Trip</button>
+          </div>
+        </div>
+
+        <div class="hero__badge hero__badge--top">
+          <span>🚨</span>
+          <strong data-i18n="badge1">SOS Ready</strong>
+        </div>
+
+        <div class="hero__badge hero__badge--bottom">
+          <span>💳</span>
+          <strong data-i18n="badge2">Low fare estimate</strong>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="market-strip" aria-label="ANYU focus">
+  <div class="market-strip__inner">
+    <span data-i18n="strip1">Verified drivers</span>
+    <span data-i18n="strip2">SOS & trip sharing</span>
+    <span data-i18n="strip3">Low transparent fares</span>
+    <span data-i18n="strip4">Cash & mobile money</span>
+    <span data-i18n="strip5">Built to scale globally</span>
+  </div>
+</section>
+
+<section class="section safety" id="safety">
+  <div class="section__inner">
+    <div class="section__head">
+      <div class="section-eyebrow" data-i18n="safety_eyebrow">Safety First</div>
+
+      <h2 class="section-h2" data-i18n="safety_h2">
+        Every rider should feel protected before, during, and after every trip.
+      </h2>
+
+      <p class="section-lead" data-i18n="safety_lead">
+        ANYU is being designed to make safety visible. Riders should know who their driver is, where they are going, how to share their trip, and how to request help quickly.
+      </p>
+    </div>
+
+    <div class="feature-grid">
+      <article class="feature-card feature-card--priority">
+        <div class="feature-icon">✅</div>
+        <h3 data-i18n="safe1_h">Verified drivers</h3>
+        <p data-i18n="safe1_p">
+          Driver identity, vehicle details, license status, ratings, and plate number should be visible before pickup.
+        </p>
+      </article>
+
+      <article class="feature-card feature-card--priority">
+        <div class="feature-icon">🚨</div>
+        <h3 data-i18n="safe2_h">Emergency SOS</h3>
+        <p data-i18n="safe2_p">
+          Riders should have quick access to emergency contacts, live location sharing, and ANYU support.
+        </p>
+      </article>
+
+      <article class="feature-card">
+        <div class="feature-icon">📍</div>
+        <h3 data-i18n="safe3_h">Share trip</h3>
+        <p data-i18n="safe3_p">
+          Family or trusted contacts can follow trip progress, driver details, vehicle details, and route information.
+        </p>
+      </article>
+
+      <article class="feature-card">
+        <div class="feature-icon">🔐</div>
+        <h3 data-i18n="safe4_h">Ride PIN</h3>
+        <p data-i18n="safe4_p">
+          A ride verification code helps reduce wrong pickups and builds confidence before the ride starts.
+        </p>
+      </article>
+
+      <article class="feature-card">
+        <div class="feature-icon">👤</div>
+        <h3 data-i18n="safe5_h">Driver profile visibility</h3>
+        <p data-i18n="safe5_p">
+          Riders should clearly see driver photo, rating, vehicle, plate number, and verification badge.
+        </p>
+      </article>
+
+      <article class="feature-card">
+        <div class="feature-icon">📝</div>
+        <h3 data-i18n="safe6_h">Incident reporting</h3>
+        <p data-i18n="safe6_p">
+          Riders and drivers should be able to report safety, payment, lost item, and service issues quickly.
+        </p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section pricing" id="pricing">
+  <div class="section__inner split">
+    <div>
+      <div class="section-eyebrow" data-i18n="pricing_eyebrow">Very Fair Pricing</div>
+
+      <h2 class="section-h2" data-i18n="pricing_h2">
+        Low prices should not mean low trust.
+      </h2>
+
+      <p class="section-lead" data-i18n="pricing_lead">
+        Many riders worry about high fares and surprise charges. ANYU is being designed to make pricing feel clear, affordable, and fair before the rider confirms a trip.
+      </p>
+
+      <div class="check-list">
+        <div>
+          <span>✓</span>
+          <p data-i18n="price1">Low fare estimates shown before booking</p>
+        </div>
+
+        <div>
+          <span>✓</span>
+          <p data-i18n="price2">No confusing hidden charges</p>
+        </div>
+
+        <div>
+          <span>✓</span>
+          <p data-i18n="price3">Cash, mobile money, card, and wallet support where available</p>
+        </div>
+
+        <div>
+          <span>✓</span>
+          <p data-i18n="price4">Promotions, referrals, and ride credits to help users save more</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="price-card">
+      <div class="price-card__label" data-i18n="price_card_label">Example fare preview</div>
+
+      <div class="price-card__top">
+        <span data-i18n="price_card_route">Short city ride</span>
+        <strong>Low Fare</strong>
+      </div>
+
+      <div class="fare-row">
+        <span data-i18n="fare_base">Base fare</span>
+        <b>Clear</b>
+      </div>
+
+      <div class="fare-row">
+        <span data-i18n="fare_distance">Distance</span>
+        <b>Shown</b>
+      </div>
+
+      <div class="fare-row">
+        <span data-i18n="fare_time">Time</span>
+        <b>Shown</b>
+      </div>
+
+      <div class="fare-row fare-total">
+        <span data-i18n="fare_total">Estimated total</span>
+        <b>Before booking</b>
+      </div>
+
+      <p data-i18n="fare_note">
+        Final prices may vary by route, time, demand, and local market conditions, but riders should always understand the estimate before confirming.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="section how" id="how">
+  <div class="section__inner">
+    <div class="section__head center">
+      <div class="section-eyebrow" data-i18n="how_eyebrow">How It Works</div>
+
+      <h2 class="section-h2" data-i18n="how_h2">
+        Simple enough for daily use. Strong enough for a global platform.
+      </h2>
+    </div>
+
+    <div class="steps">
+      <div class="step">
+        <span>1</span>
+        <h3 data-i18n="step1_h">Request</h3>
+        <p data-i18n="step1_p">Enter your destination and review your estimated fare before booking.</p>
+      </div>
+
+      <div class="step">
+        <span>2</span>
+        <h3 data-i18n="step2_h">Match</h3>
+        <p data-i18n="step2_p">ANYU finds a nearby driver and shows verified driver and vehicle details.</p>
+      </div>
+
+      <div class="step">
+        <span>3</span>
+        <h3 data-i18n="step3_h">Ride Safely</h3>
+        <p data-i18n="step3_p">Track your driver, share your trip, and access safety tools during the ride.</p>
+      </div>
+
+      <div class="step">
+        <span>4</span>
+        <h3 data-i18n="step4_h">Pay Fairly</h3>
+        <p data-i18n="step4_p">Pay clearly with supported methods and keep your receipt after the ride.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section app-preview" id="app">
+  <div class="section__inner split">
+    <div>
+      <div class="section-eyebrow" data-i18n="app_eyebrow">Rider App</div>
+
+      <h2 class="section-h2" data-i18n="app_h2">
+        Designed for safety, savings, and confidence.
+      </h2>
+
+      <p class="section-lead" data-i18n="app_lead">
+        The rider app will include ride booking, scheduled rides, rides for someone else, activity, wallet, inbox, account settings, promotions, referrals, and safety tools.
+      </p>
+
+      <div class="tag-list">
+        <span data-i18n="tag1">Schedule rides</span>
+        <span data-i18n="tag2">Book for someone else</span>
+        <span data-i18n="tag3">Wallet</span>
+        <span data-i18n="tag4">Inbox</span>
+        <span data-i18n="tag5">Safety Center</span>
+        <span data-i18n="tag6">Referrals</span>
+        <span data-i18n="tag7">Promotions</span>
+        <span data-i18n="tag8">Emergency contacts</span>
+      </div>
+    </div>
+
+    <div class="app-stack">
+      <div class="mini-screen">
+        <h4 data-i18n="mini1_h">Home</h4>
+        <p data-i18n="mini1_p">Where are you going?</p>
+        <div class="mini-actions">
+          <span>Schedule</span>
+          <span>For someone</span>
+          <span>Safety</span>
+        </div>
+      </div>
+
+      <div class="mini-screen mini-screen--gold">
+        <h4 data-i18n="mini2_h">Safety</h4>
+        <p data-i18n="mini2_p">SOS • Share Trip • Emergency Contacts • Ride PIN</p>
+      </div>
+
+      <div class="mini-screen">
+        <h4 data-i18n="mini3_h">Wallet</h4>
+        <p data-i18n="mini3_p">Cash • Mobile Money • Card • Credits • Promotions</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section driver" id="drivers">
+  <div class="section__inner split">
+    <div class="driver__img-wrap">
+      <img src="assets/driver-car.png" alt="ANYU driver vehicle" class="driver__img">
+      <div class="driver__caption" data-i18n="driver_caption">
+        Driver early interest is open before launch
+      </div>
+    </div>
+
+    <div>
+      <div class="section-eyebrow" data-i18n="drv_eyebrow">For Drivers</div>
+
+      <h2 class="section-h2" data-i18n="drv_h2">
+        A safer, fairer platform should also respect drivers.
+      </h2>
+
+      <p class="section-lead" data-i18n="drv_lead">
+        Drivers are central to ANYU. We want a clear, fair, and professional driver experience with transparent earnings, safety tools, and reliable support.
+      </p>
+
+      <div class="driver__perks">
+        <div class="perk">
+          <div class="perk__icon">💰</div>
+          <div>
+            <strong data-i18n="perk1_h">Clear earnings</strong>
+            <p data-i18n="perk1_p">Drivers should understand fares, commissions, wallet balances, and payouts.</p>
+          </div>
+        </div>
+
+        <div class="perk">
+          <div class="perk__icon">🛡️</div>
+          <div>
+            <strong data-i18n="perk2_h">Driver safety</strong>
+            <p data-i18n="perk2_p">Incident reporting, rider information, and support tools help protect drivers too.</p>
+          </div>
+        </div>
+
+        <div class="perk">
+          <div class="perk__icon">🤝</div>
+          <div>
+            <strong data-i18n="perk3_h">Respectful onboarding</strong>
+            <p data-i18n="perk3_p">Driver feedback helps shape onboarding, verification, and daily operations.</p>
+          </div>
+        </div>
+      </div>
+
+      <a href="#waitlist" class="btn btn--gold driver-cta" data-i18n="drv_cta">Register Interest</a>
+    </div>
+  </div>
+</section>
+
+<section class="section about" id="about">
+  <div class="section__inner split">
+    <div>
+      <div class="section-eyebrow" data-i18n="about_eyebrow">About ANYU</div>
+
+      <h2 class="section-h2" data-i18n="about_h2">
+        Built to make everyday movement safer and more affordable.
+      </h2>
+
+      <p class="section-lead" data-i18n="about_lead">
+        ANYU is building a modern mobility platform starting with ride-hailing and expanding over time into a broader ecosystem of transportation, delivery, payments, and local services.
+      </p>
+
+      <p class="about__text" data-i18n="about_text">
+        We are starting carefully by listening to riders and drivers before launch. The goal is simple: build a service people can trust, with safety tools they can see and pricing that feels fair.
+      </p>
+    </div>
+
+    <div class="founder-card">
+      <div class="founder-card__quote">“</div>
+      <p data-i18n="founder_quote">
+        ANYU started from a simple belief: transportation should help people move forward, not create more obstacles. We are building carefully, listening to real riders and drivers, and creating a platform designed for long-term impact.
+      </p>
+      <strong>— Boris Anyu</strong>
+      <span data-i18n="founder_title">Founder, ANYU</span>
+    </div>
+  </div>
+</section>
+
+<section class="section waitlist" id="waitlist">
+  <div class="waitlist__inner">
+    <div class="waitlist__head">
+      <div class="section-eyebrow light" data-i18n="wl_eyebrow">Early Access & Feedback</div>
+
+      <h2 class="waitlist__h2">
+        <span data-i18n="wl_h2a">Help shape ANYU before launch.</span>
+        <em data-i18n="wl_h2b">It takes less than 1 minute.</em>
+      </h2>
+
+      <p class="waitlist__sub" data-i18n="wl_sub">
+        Your answers help us understand what matters most: safety, very fair prices, wait time, payments, support, drivers, and trust.
+      </p>
+    </div>
+
+    <form
+      name="waitlist"
+      method="POST"
+      data-netlify="true"
+      netlify-honeypot="bot-field"
+      action="/success.html"
+      class="waitlist__form"
+      id="waitlistForm"
+    >
+      <input type="hidden" name="form-name" value="waitlist">
+
+      <p hidden>
+        <label>Do not fill this out: <input name="bot-field"></label>
+      </p>
+
+      <div class="wf__intro">
+        <h3 data-i18n="q_intro_title">Tell us what would make movement better.</h3>
+        <p data-i18n="q_intro_text">
+          We are listening before launch so ANYU can be built around real riders and drivers.
+        </p>
+      </div>
+
+      <div class="wf__row">
+        <div class="wf__field">
+          <label data-i18n="wf_name">Full name</label>
+          <input type="text" name="name" data-i18n-placeholder="ph_name" placeholder="Your name" required>
+        </div>
+
+        <div class="wf__field">
+          <label data-i18n="wf_phone">Phone / WhatsApp number</label>
+          <input type="tel" name="phone" data-i18n-placeholder="ph_phone" placeholder="+237 ..." required>
+        </div>
+      </div>
+
+      <div class="wf__row">
+        <div class="wf__field">
+          <label data-i18n="wf_email">Email address <span class="opt">(optional)</span></label>
+          <input type="email" name="email" data-i18n-placeholder="ph_email" placeholder="you@email.com">
+        </div>
+
+        <div class="wf__field">
+          <label data-i18n="wf_city">City</label>
+          <input type="text" name="city" data-i18n-placeholder="ph_city" placeholder="Douala, Yaoundé, Buea..." required>
+        </div>
+      </div>
+
+      <div class="wf__field">
+        <label data-i18n="wf_interest">I am interested in</label>
+        <select name="interest">
+          <option value="Rider" data-i18n="wf_opt1">Riding with ANYU</option>
+          <option value="Driver" data-i18n="wf_opt2">Driving with ANYU</option>
+          <option value="Both" data-i18n="wf_opt3">Both riding and driving</option>
+          <option value="Business or partnership" data-i18n="wf_opt4">Business or partnership</option>
+        </select>
+      </div>
+
+      <div class="wf__field">
+        <label data-i18n="q_problem_label">What is the biggest issue with transportation today?</label>
+        <select name="biggest_challenge">
+          <option value="Safety concerns" data-i18n="q_problem_4">Safety concerns</option>
+          <option value="High prices" data-i18n="q_problem_2">High prices</option>
+          <option value="Long waiting times" data-i18n="q_problem_1">Long waiting times</option>
+          <option value="Drivers cancelling rides" data-i18n="q_problem_3">Drivers cancelling rides</option>
+          <option value="Payment difficulties" data-i18n="q_problem_5">Payment difficulties</option>
+          <option value="Poor customer service" data-i18n="q_problem_6">Poor customer service</option>
+          <option value="Other" data-i18n="q_problem_7">Other</option>
+        </select>
+      </div>
+
+      <div class="wf__field">
+        <label data-i18n="q_improve_label">What should ANYU do better for riders and drivers?</label>
+        <textarea
+          name="improvement_feedback"
+          rows="4"
+          data-i18n-placeholder="ph_feedback"
+          placeholder="Tell us in your own words. We are listening."
+        ></textarea>
+      </div>
+
+      <div class="wf__row">
+        <div class="wf__field">
+          <label data-i18n="q_whatsapp_label">Can we contact you on WhatsApp for early access updates?</label>
+          <select name="whatsapp_permission">
+            <option value="Yes" data-i18n="yes">Yes</option>
+            <option value="No" data-i18n="no">No</option>
+          </select>
+        </div>
+
+        <div class="wf__field">
+          <label data-i18n="q_language_label">Preferred language</label>
+          <select name="preferred_language">
+            <option value="English">English</option>
+            <option value="French">Français</option>
+          </select>
+        </div>
+      </div>
+
+      <button type="submit" class="wf__submit">
+        <span data-i18n="wf_submit">Send My Feedback</span>
+      </button>
+
+      <p class="wf__note" data-i18n="wf_note">
+        We only use your information for ANYU feedback, launch updates, and early access.
+      </p>
+    </form>
+
+    <div class="waitlist__whatsapp">
+      <p data-i18n="whatsapp_cta_text">Prefer WhatsApp? You can also message us directly.</p>
+      <a
+        href="https://wa.me/237652317825?text=Hi%20ANYU%2C%20I%20want%20to%20share%20feedback."
+        target="_blank"
+        rel="noopener"
+        data-i18n="whatsapp_cta_btn"
+      >
+        Chat with ANYU on WhatsApp
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="section faq" id="faq">
+  <div class="section__inner">
+    <div class="section__head center">
+      <div class="section-eyebrow" data-i18n="faq_eyebrow">FAQs</div>
+      <h2 class="section-h2" data-i18n="faq_h2">Questions before launch.</h2>
+    </div>
+
+    <div class="faq-grid">
+      <details open>
+        <summary data-i18n="faq1_q">Is ANYU live yet?</summary>
+        <p data-i18n="faq1_a">
+          ANYU is not live yet. We are preparing the platform, collecting feedback, and building toward early access.
+        </p>
+      </details>
+
+      <details>
+        <summary data-i18n="faq2_q">Will ANYU focus on low prices?</summary>
+        <p data-i18n="faq2_a">
+          Yes. ANYU is being designed around very fair pricing, transparent fare estimates, and promotions to help riders save more.
+        </p>
+      </details>
+
+      <details>
+        <summary data-i18n="faq3_q">How will ANYU improve safety?</summary>
+        <p data-i18n="faq3_a">
+          ANYU is being designed with verified drivers, visible vehicle details, SOS tools, trip sharing, emergency contacts, ride PIN verification, and incident reporting.
+        </p>
+      </details>
+
+      <details>
+        <summary data-i18n="faq4_q">Will ANYU support cash and mobile money?</summary>
+        <p data-i18n="faq4_a">
+          Yes. ANYU is being designed to support cash and digital payment options where available, including mobile money and wallet features.
+        </p>
+      </details>
+
+      <details>
+        <summary data-i18n="faq5_q">Can drivers register interest?</summary>
+        <p data-i18n="faq5_a">
+          Yes. Drivers can use the early access form or contact ANYU on WhatsApp before onboarding begins.
+        </p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="section contact" id="contact">
+  <div class="section__inner contact-card">
+    <div>
+      <div class="section-eyebrow" data-i18n="contact_eyebrow">Contact</div>
+
+      <h2 class="section-h2" data-i18n="contact_h2">Talk to ANYU.</h2>
+
+      <p class="section-lead" data-i18n="contact_lead">
+        For early access, driver interest, partnerships, or support, contact us directly.
+      </p>
+    </div>
+
+    <div class="contact-actions">
+      <a class="btn btn--gold" href="mailto:admin@getanyu.com">admin@getanyu.com</a>
+      <a class="btn btn--whatsapp" href="https://wa.me/237652317825" target="_blank" rel="noopener">WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="footer__inner">
+    <div class="footer__brand">
+      <img src="assets/anyu-logo.png" alt="ANYU" class="footer__logo-img">
+    </div>
+
+    <p class="footer__tagline" data-i18n="footer_tag">
+      ANYU — Safe Rides. Very Fair Prices.
+    </p>
+
+    <div class="footer__socials">
+      <a href="https://facebook.com/getanyu" target="_blank" rel="noopener">Facebook</a>
+      <a href="https://instagram.com/getanyu" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://tiktok.com/@getanyu" target="_blank" rel="noopener">TikTok</a>
+      <a href="https://x.com/getanyuapp" target="_blank" rel="noopener">X</a>
+      <a href="https://youtube.com/@getanyuapp" target="_blank" rel="noopener">YouTube</a>
+      <a href="https://linkedin.com/company/getanyu" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://wa.me/237652317825" target="_blank" rel="noopener">WhatsApp</a>
+      <a href="mailto:admin@getanyu.com">Email</a>
+    </div>
+
+    <div class="footer__legal">
+      <a href="/privacy.html">Privacy Policy</a>
+      <a href="/terms.html">Terms & Conditions</a>
+      <a href="/refund-policy.html">Refund Policy</a>
+      <a href="/disclaimer.html">Disclaimer</a>
+    </div>
+
+    <p class="footer__copy">
+      © 2026 ANYU. <span data-i18n="footer_rights">All rights reserved.</span>
+    </p>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
